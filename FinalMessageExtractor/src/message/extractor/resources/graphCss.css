@@ -1,0 +1,113 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 13, 2014, 12:06:45 PM
+    Author     : vaio
+*/
+
+.root {
+     -fx-background-image: url("bg_image.png");
+     -fx-background-size: stretch;
+     
+}
+.screenTitle{
+   -fx-text-fill: rgba(255,255,255,0.4);
+}
+.nameFill{
+    -fx-background-color: rgba(255,255,255,0.3);
+}
+.headerText{
+   -fx-text-fill: rgba(255,255,255,0.7);
+   -fx-font-family: Segoe UI;  
+   -fx-font-size: 30pt;  
+}
+.screenText{
+   -fx-text-fill: rgba(255,255,255,0.7);
+   -fx-font-family: Segoe UI;  
+   -fx-font-size: 20pt;  
+}
+.graphBtn {
+    -fx-background-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-border-color: rgba(255,255,255,0.7);
+    -fx-border-width: 1px;
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+.graphBtn:hover {
+    -fx-background-color: rgba(255,255,255,0.25);
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+
+.graphBtn:pressed {
+    -fx-background-color: rgba(0,0,0,0.25);
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+}
+.helpBtn {
+    -fx-background-color: transparent;
+    -fx-font-family: "Segoe UI";
+    -fx-border-color: rgba(255,255,255,0.7);
+    -fx-border-width: 1px;
+    -fx-border-radius: 60;
+    -fx-font-size: 12.54px;
+    -fx-text-alignment: center;   
+    -fx-text-fill: white;
+}
+
+.helpBtn:hover {
+    -fx-background-color: rgba(255,255,255,0.25);
+    -fx-background-radius: 60;
+    -fx-background-insets: 0;
+}
+
+.helpBtn:pressed {
+    -fx-background-color: rgba(0,0,0,0.25);
+    -fx-background-radius: 60;
+    -fx-background-insets: 0;
+}
+.list-cell:filled:selected:focused, .list-cell:filled:selected {
+    /* 3:, 4: */
+    -fx-background-color: linear-gradient(#333 0%, #777 25%, #aaa 75%, #eee 100%);
+    -fx-text-fill: white; /* 5 */
+}
+.list-cell { -fx-text-fill: black; /* 5 */ }
+.list-cell:odd { -fx-background-color: #f4f4f4; /* 1 */ }
+.list-cell:even { -fx-background-color: #f4f4f4; /* for information */ }
+.list-cell:filled:hover { 
+    -fx-background-color: #00f; /* 2 */
+    -fx-text-fill: white; /* 5 */
+}
+.separator1 *.line { 
+-fx-background-color: rgba(255,255,255,0.3);    
+-fx-border-color: transparent; 
+-fx-border-style: solid;
+-fx-border-width: .1px;
+
+}
+.check-box *.box {
+  -fx-background-color:transparent;
+  -fx-border-color:rgba(255,255,255,0.7) ;
+  -fx-border-width: 1.75px;
+  
+      
+}
+.check-box:selected .mark{
+   -fx-shape : "M 0 0 L 50 0 L 50 50 L 0 50 Z";
+   -fx-background-insets: -5.5,-5.5,-5,-5;
+   -fx-background-color: rgba(255,255,255,0.5);
+} 
+.checkboxsetStyle {
+     
+    -fx-font-family: Segoe UI;  
+    -fx-font-size: 20pt; 
+    -fx-text-fill:rgba(255,255,255,0.7);
+   
+    
+};
+

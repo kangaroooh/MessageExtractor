@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-1.0" minWidth="-1.0" prefHeight="600.0" prefWidth="1000.0" styleClass="root" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="message.extractor.gui.GraphScreenFXMLController">
+  <children>
+    <Label layoutX="71.0" layoutY="13.0" minHeight="64.0" prefHeight="64.0" prefWidth="136.0" styleClass="screenTitle" text="Graph" textAlignment="LEFT">
+      <font>
+        <Font name="Segoe UI" size="90.0" />
+      </font>
+    </Label>
+    <Button fx:id="backBtn" cancelButton="false" contentDisplay="GRAPHIC_ONLY" defaultButton="false" layoutX="24.0" layoutY="35.0" mnemonicParsing="false" onAction="#handleBackBtn" prefHeight="30.0" prefWidth="30.0" scaleX="1.0" scaleY="1.0" styleClass="backBtn" text="Button" textAlignment="LEFT" textOverrun="ELLIPSIS" />
+    <HBox id="HBox" alignment="CENTER" layoutX="0.0" layoutY="87.0" maxWidth="-1.0" prefWidth="-1.0" spacing="50.0">
+      <children>
+        <HBox id="HBox" alignment="CENTER" spacing="25.0">
+          <children>
+            <VBox id="VBox" alignment="CENTER_LEFT" spacing="5.0">
+              <children>
+                <Label prefHeight="27.0" styleClass="headerText" text="Input">
+                  <font>
+                    <Font name="Segoe UI Light" size="30.0" fx:id="x1" />
+                  </font>
+                </Label>
+                <Button id="load" fx:id="loadFileBtn" mnemonicParsing="false" onAction="#handleLoadFileBtn" prefHeight="41.0" prefWidth="215.0" styleClass="graphBtn" text="Load File" />
+                <Label font="$x1" prefHeight="-1.0" styleClass="headerText" text="Search" />
+                <Label font="$x1" prefHeight="-1.0" styleClass="bodyText" text="Name" />
+                <TextField fx:id="nameArea" onKeyTyped="#handleNameFieldChange" prefHeight="-1.0" prefWidth="215.0" promptText="Name" styleClass="nameFill" />
+                <Label font="$x1" prefHeight="-1.0" styleClass="bodyText" text="Result" />
+                <ListView fx:id="resultList" onKeyReleased="#handleNameFieldChange" opacity="1.0" prefHeight="300.0" prefWidth="215.0" />
+              </children>
+            </VBox>
+            <VBox id="VBox" alignment="CENTER_LEFT" prefHeight="366.0" spacing="30.0">
+              <children>
+                <Label styleClass="headerText" text="File Data" />
+                <HBox prefHeight="350.0" prefWidth="129.0" spacing="0.0" VBox.vgrow="ALWAYS">
+                  <children>
+                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                      <children>
+                        <Label id="nW4" styleClass="bodyText" text="n of W4" />
+                        <Label id="nW5" styleClass="bodyText" text="n of W5" />
+                        <Label id="nE1" styleClass="bodyText" text="n of E1" />
+                        <Label id="nE2" styleClass="bodyText" text="n of E2" />
+                        <Label id="nE3" styleClass="bodyText" text="n of E3" />
+                        <Label id="nE4" styleClass="bodyText" text="n of E4" />
+                        <Label id="nE5" styleClass="bodyText" text="n of E5" />
+                        <Label id="nE6" styleClass="bodyText" text="n of E6" />
+                      </children>
+                    </VBox>
+                    <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+                      <children>
+                        <Label fx:id="nW4" styleClass="bodyText" text="-" />
+                        <Label id="nE1" fx:id="nW5" styleClass="bodyText" text="-" />
+                        <Label id="nW5" fx:id="nE1" styleClass="bodyText" text="-" />
+                        <Label fx:id="nE2" styleClass="bodyText" text="-" />
+                        <Label fx:id="nE3" styleClass="bodyText" text="-" />
+                        <Label fx:id="nE4" styleClass="bodyText" text="-" />
+                        <Label fx:id="nE5" styleClass="bodyText" text="-" />
+                        <Label fx:id="nE6" styleClass="bodyText" text="-" />
+                      </children>
+                      <padding>
+                        <Insets left="40.0" />
+                      </padding>
+                    </VBox>
+                  </children>
+                </HBox>
+              </children>
+            </VBox>
+          </children>
+        </HBox>
+        <VBox id="VBox" alignment="CENTER" spacing="30.0">
+          <children>
+            <HBox id="HBox" alignment="CENTER_LEFT" spacing="65.0" VBox.vgrow="NEVER">
+              <children>
+                <HBox id="HBox" alignment="CENTER" spacing="5.0">
+                  <children>
+                    <Label styleClass="headerText" text="Preference" />
+                    <Button fx:id="helpBtn" minHeight="29.0" minWidth="25.0" mnemonicParsing="false" onAction="#handleHelpBtn" prefHeight="29.0" prefWidth="29.0" styleClass="helpBtn" text="?" />
+                  </children>
+                </HBox>
+                <CheckBox fx:id="Allbox" mnemonicParsing="false" styleClass="checkboxsetStyle" text="Select All" />
+              </children>
+              <VBox.margin>
+                <Insets />
+              </VBox.margin>
+            </HBox>
+            <HBox maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0">
+              <children>
+                <VBox cache="false" pickOnBounds="true" prefHeight="-1.0" prefWidth="55.0" spacing="20.0">
+                  <children>
+                    <CheckBox id="C1" fx:id="C1box" graphicTextGap="50.0" mnemonicParsing="false" styleClass="checkboxsetStyle" text="C1" />
+                    <CheckBox fx:id="C2box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="C2" />
+                    <CheckBox fx:id="C3box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="C3" />
+                    <CheckBox fx:id="C4box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="C4" />
+                    <CheckBox fx:id="C5box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="C5" />
+                    <CheckBox fx:id="C6box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="C6" />
+                    <CheckBox fx:id="C7box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="C7" />
+                    <CheckBox fx:id="C8box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="C8" />
+                    <CheckBox fx:id="C9box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="C9" />
+                  </children>
+                </VBox>
+                <VBox prefHeight="-1.0" prefWidth="55.0" spacing="20.0">
+                  <children>
+                    <CheckBox fx:id="W1box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W1" />
+                    <CheckBox fx:id="W2box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W2" />
+                    <CheckBox fx:id="W3box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W3" />
+                    <CheckBox fx:id="W4box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W4" />
+                    <CheckBox fx:id="W5box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W5" />
+                    <CheckBox fx:id="W6box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W6" />
+                    <CheckBox fx:id="W7box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W7" />
+                    <CheckBox fx:id="W8box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W8" />
+                    <CheckBox fx:id="W9box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W9" />
+                    <CheckBox fx:id="W10box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="W10" />
+                  </children>
+                </VBox>
+                <VBox prefHeight="-1.0" prefWidth="55.0" spacing="20.0">
+                  <children>
+                    <CheckBox fx:id="P1box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P1" />
+                    <CheckBox fx:id="P2box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P2" />
+                    <CheckBox fx:id="P3box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P3" />
+                    <CheckBox fx:id="P4box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P4" />
+                    <CheckBox fx:id="P5box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P5" />
+                    <CheckBox fx:id="P6box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P6" />
+                    <CheckBox fx:id="P7box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P7" />
+                    <CheckBox fx:id="P8box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P8" />
+                    <CheckBox fx:id="P9box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P9" />
+                    <CheckBox fx:id="P10box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="P10" />
+                  </children>
+                </VBox>
+                <VBox prefHeight="-1.0" prefWidth="55.0" spacing="20.0">
+                  <children>
+                    <CheckBox fx:id="E1box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E1" />
+                    <CheckBox fx:id="E2box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E2" />
+                    <CheckBox fx:id="E3box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E3" />
+                    <CheckBox fx:id="E4box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E4" />
+                    <CheckBox fx:id="E5box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E5" />
+                    <CheckBox fx:id="E6box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E6" />
+                    <CheckBox fx:id="E7box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E7" />
+                    <CheckBox fx:id="E8box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E8" />
+                    <CheckBox fx:id="E9box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E9" />
+                    <CheckBox fx:id="E10box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="E10" />
+                  </children>
+                </VBox>
+                <VBox prefHeight="-1.0" prefWidth="55.0" spacing="20.0">
+                  <children>
+                    <CheckBox fx:id="S1box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="S1" />
+                    <CheckBox fx:id="S2box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="S2" />
+                    <CheckBox fx:id="S3box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="S3" />
+                    <CheckBox fx:id="S4box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="S4" />
+                    <CheckBox fx:id="S5box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="S5" />
+                    <CheckBox id="S6box" fx:id="T1box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="T1" />
+                    <CheckBox id="S7box" fx:id="T2box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="T2" />
+                    <CheckBox id="S8box" fx:id="T3box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="T3" />
+                    <CheckBox id="S9box" fx:id="T4box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="T4" />
+                    <CheckBox id="S10box" fx:id="T5box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="T5" />
+                    <CheckBox id="S10box" fx:id="T6box" mnemonicParsing="false" styleClass="checkboxsetStyle" text="T6" />
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+          </children>
+        </VBox>
+        <Button id="displayG" fx:id="displayGraphBtn" mnemonicParsing="false" onAction="#handleDisplayGraphBtn" prefHeight="55.0" prefWidth="234.0" styleClass="graphBtn" text="Display Graph" />
+      </children>
+      <padding>
+        <Insets bottom="15.0" left="15.0" right="15.0" />
+      </padding>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@../resources/analyzeCss.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="backgroundPane" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="message.extractor.gui.HomeScreenFXMLController">
+  <children>
+    <HBox id="HBox" alignment="CENTER" layoutY="9.0" maxHeight="-1.0" maxWidth="-1.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <Label minHeight="-Infinity" prefHeight="-1.0" prefWidth="-1.0" styleClass="applicationTitle" text="Message Extractor" />
+      </children>
+    </HBox>
+    <HBox id="HBox" alignment="CENTER" layoutY="220.0" spacing="5.0" AnchorPane.leftAnchor="0.5" AnchorPane.rightAnchor="-0.5">
+      <children>
+        <VBox id="VBox" alignment="CENTER" spacing="10.0">
+          <children>
+            <Button fx:id="addDataBtn" mnemonicParsing="false" onAction="#handleAddDataBtn" prefHeight="45.0" prefWidth="360.0" styleClass="menuBtn" text="ADD DATA" />
+            <Button fx:id="graphBtn" mnemonicParsing="false" onAction="#handleGraphBtn" prefHeight="45.0" prefWidth="360.0" styleClass="menuBtn, graphBtn" text="GRAPH" />
+            <Button fx:id="openWekaBtn" mnemonicParsing="false" onAction="#handleOpenWeka" prefHeight="45.0" prefWidth="360.0" styleClass="menuBtn, graphBtn" text="OPEN FILE (ARFF)" />
+            <Button id="openWekaBtn" fx:id="creditBtn" mnemonicParsing="false" onAction="#handleCreditBtn" prefHeight="45.0" prefWidth="360.0" styleClass="menuBtn, graphBtn" text="CREDIT" />
+          </children>
+        </VBox>
+      </children>
+    </HBox>
+    <HBox id="HBox" alignment="CENTER" spacing="5.0" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <children>
+        <Button mnemonicParsing="false" onAction="#handleExitBtn" prefHeight="80.0" prefWidth="360.0" styleClass="exitBtn" text="" />
+      </children>
+    </HBox>
+  </children>
+  <stylesheets>
+    <URL value="@../resources/homeScreenCss.css" />
+  </stylesheets>
+</AnchorPane>

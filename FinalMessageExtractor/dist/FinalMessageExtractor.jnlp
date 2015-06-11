@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FinalMessageExtractor.jnlp">
+  <information>
+    <title>FinalMessageExtractor</title>
+    <vendor>HBK</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="FinalMessageExtractor.jar" size="1618520" download="eager" />
+    <jar href="lib/javafx-dialogs-0.0.4.jar" size="118239" download="eager" />
+    <jar href="lib/jcommon-1.0.21.jar" size="323663" download="eager" />
+    <jar href="lib/jfreechart-1.0.17.jar" size="1544449" download="eager" />
+    <jar href="lib/weka.jar" size="6482057" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="FinalMessageExtractor" >
+    <param name="requiredFXVersion" value="2.2+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="message.extractor.gui.MainApplication"  name="FinalMessageExtractor" />
+  <update check="always"/>
+</jnlp>

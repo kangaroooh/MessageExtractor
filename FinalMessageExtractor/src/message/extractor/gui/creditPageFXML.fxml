@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="460.0" prefWidth="661.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <Rectangle arcHeight="0.0" arcWidth="0.0" fill="#ff9533" height="80.87711334228516" layoutX="-64.0" layoutY="13.0" rotate="144.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="303.8976849913597" />
+    <Text fill="WHITE" layoutX="-6.0" layoutY="100.0" rotate="324.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Credit">
+      <font>
+        <Font name="Segoe UI Light" size="70.0" />
+      </font>
+    </Text>
+    <Text layoutX="67.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="โครงการวิจัย : การหาตัวผู้เขียนข้อความออนไลน์จากเอกลักษณ์ในการเขียน" translateY="-10.0">
+      <font>
+        <Font name="Cordia New" size="25.0" fx:id="x2" />
+      </font>
+    </Text>
+    <Text layoutX="28.0" layoutY="333.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finding the Author of Online Messages using Authorship Attribution" translateY="-5.0">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Text>
+    <Text font="$x2" layoutX="267.0" layoutY="371.0" strokeType="OUTSIDE" strokeWidth="0.0" text="หัวหน้าโครงการ" translateY="10.0" />
+    <Text font="$x2" layoutX="209.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ผศ.ดร.รังสิพรรณ มฤคทัต" textAlignment="LEFT" translateX="20.0" translateY="10.0" />
+    <VBox layoutX="203.0" layoutY="82.0" prefHeight="133.0" prefWidth="341.0" spacing="10.0">
+      <children>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Robroo Somkiadcharoen">
+          <font>
+            <Font name="Segoe UI Light" size="30.0" fx:id="x1" />
+          </font>
+        </Text>
+        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Ratthanan Nalintasnai" />
+        <Text font="$x1" strokeType="OUTSIDE" strokeWidth="0.0" text="Tappasarn Aramboonpong" />
+      </children>
+    </VBox>
+  </children>
+</AnchorPane>
